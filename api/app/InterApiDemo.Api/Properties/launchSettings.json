@@ -1,0 +1,36 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:32584",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/user",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "InterApiDemo.Api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/user",
+      "applicationUrl": "http://localhost:5000;http://172.20.43.15:5000;http://yasint:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "INTERAPI_SETTINGS__API__BASEURL": "https://api-gateway.intertech.com.tr/BankingApiV01/",
+        "INTERAPI_SETTINGS__API__APPKEY": "",
+        "INTERAPI_SETTINGS__API__SUBSCRIPTIONKEY": "",
+        "INTERAPI_SETTINGS__API__CHANNEL": "API",
+        "INTERAPI_SETTINGS__API__JWTTOKENSECRET": "InterApiDemo",
+        "INTERAPI_SETTINGS__USECORS": true
+      }
+    }
+  }
+}

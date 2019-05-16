@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Hesaplar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <inter-account-list (selectAccount)="navigate($event)">
+  </inter-account-list>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button Text="Hesaplar" defaultHref="accounts"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Hesap Detayı
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="account">
+    <ion-card-header>
+      <ion-card-subtitle>{{account.accountName}}</ion-card-subtitle>
+      <ion-card-title>{{account.branchCode + ' ' + account.customerNo + ' ' + account.accountSuffix}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label position="stacked">Bakiye</ion-label>
+            <ion-label>{{account.amountOfBalance}} {{account.currencyCode}}</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        <h1>Hesap Hareketleri</h1>
+      </ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let activity of accountActivityList">
+      <ion-label text-wrap>
+        <h2>{{getHeader(account, activity)}}</h2>
+        <h3>{{activity.explanation}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

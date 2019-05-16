@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      InterApi Demo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card-content>
+    <form #form="ngForm" (ngSubmit)="login()">
+      <ion-grid>
+        <ion-row color="primary" justify-content-center>
+          <ion-col align-self-center>
+            <ion-item>
+              <ion-label position="stacked">Müşteri Numarası</ion-label>
+              <ion-input name="customerNo" type="number" [(ngModel)]="customerNo" required></ion-input>
+            </ion-item>
+            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Giriş Yap</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-card-content>
+</ion-content>

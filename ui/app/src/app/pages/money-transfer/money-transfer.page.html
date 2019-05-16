@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Para Transferi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-list-header class="hydrated" color="secondary">
+      <ion-label>Havale</ion-label>
+    </ion-list-header>
+    <ion-item [routerLink]="'/wire-account'">Hesaba Havale
+      <ion-icon slot="end" name="arrow-round-forward"></ion-icon>
+    </ion-item>
+    <ion-item [routerLink]="'/wire-iban'">Ibana Havale
+      <ion-icon slot="end" name="arrow-round-forward"></ion-icon>
+    </ion-item>
+    <ion-list-header class="hydrated" color="secondary">
+      <ion-label>EFT</ion-label>
+    </ion-list-header>
+    <ion-item [routerLink]="'/eft-account'">Hesaba Eft
+      <ion-icon slot="end" name="arrow-round-forward"></ion-icon>
+    </ion-item>
+    <ion-item [routerLink]="'/eft-iban'">Ibana Eft
+      <ion-icon slot="end" name="arrow-round-forward"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

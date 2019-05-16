@@ -1,0 +1,1 @@
+docker build -t adkaltyapi/interapidemo.ui:1 .

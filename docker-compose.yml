@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  api:
+    #build:
+     # context: ./api
+    image: intertechtr/interapi-web-demo-api:latest
+    environment: 
+      - INTERAPI_SETTINGS__API__BASEURL=https://api-gateway.intertech.com.tr/BankingApiV01/
+      - INTERAPI_SETTINGS__API__SUBSCRIPTIONKEY=YourSubscriptionKey
+      - INTERAPI_SETTINGS__API__CHANNEL=API
+    ports:
+    - "88:5000"
+  ui:
+    #build:
+     # context: ./ui
+    image: intertechtr/interapi-web-demo-ui:latest
+    ports:
+    - "9999:80"

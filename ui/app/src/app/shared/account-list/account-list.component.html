@@ -1,0 +1,10 @@
+<ion-list>
+  <ion-item class="account-selection" *ngFor="let account of accounts; let idx = index;" (click)="navigate(account)">
+    <ion-icon slot="start" name="card"></ion-icon>
+    <ion-label>
+      <h2>{{account.accountName}}/ {{account.amountOfBalance}} {{account.currencyCode}}</h2>
+      <h3>{{account.branchCode + ' ' + account.customerNo + ' ' + account.accountSuffix}}</h3>
+    </ion-label>
+    <ion-icon slot="end" name="arrow-round-forward"></ion-icon>
+  </ion-item>
+</ion-list>

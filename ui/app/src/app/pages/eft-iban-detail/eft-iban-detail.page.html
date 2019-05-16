@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="eft-iban"></ion-back-button>
+    </ion-buttons>
+    <ion-title>IBAN Eft</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="sourceAccount">
+    <ion-card-header>
+
+      <ion-card-title>Kaynak Hesap
+      </ion-card-title>
+      <ion-card-subtitle>{{sourceAccount.accountName}}/
+        {{sourceAccount.branchCode + ' ' + sourceAccount.customerNo + ' ' + sourceAccount.accountSuffix}}
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>Bakiye: {{sourceAccount.amountOfBalance}} {{sourceAccount.currencyCode}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Havale Yapılacak Hesap</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form #form="ngForm" (ngSubmit)="eft()">
+        <ion-grid>
+          <ion-row color="primary" justify-content-center>
+            <ion-col align-self-center>
+              <ion-item>
+                <ion-label position="stacked">Tutar</ion-label>
+                <ion-input name="amount" type="number" [(ngModel)]="amount" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Açıklama</ion-label>
+                <ion-input name="explanation" type="text" [(ngModel)]="explanation" required>
+                </ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Banka Kodu</ion-label>
+                <ion-input name="branchCode" type="number" [(ngModel)]="destinationBankCode" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Alıcı</ion-label>
+                <ion-input name="receiver" type="text" [(ngModel)]="receiverName" required>
+                </ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">IBAN Numarası</ion-label>
+                <ion-input name="ibanNumber" type="text" [(ngModel)]="ibanNumber" required>
+                </ion-input>
+              </ion-item>
+              <br>
+
+              <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">EFT Yap</ion-button>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

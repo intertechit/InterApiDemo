@@ -1,0 +1,5 @@
+ng serve --port 5001 --host 0.0.0.0 --disable-host-check
+
+using docker proxy
+docker run --name demoproxy --add-host yasin:172.20.43.15 -p 9999:80 -v E:\project\inter\InterApiDemo\proxy/nginx.conf:/etc/nginx/nginx.conf  172.19.68.138:8083/nginx-alpine-run:1
+docker run --name demolocalproxy --add-host ui:172.20.43.15 -p 9999:80 -v E:\project\inter\InterApiDemo\nginx-local.conf:/etc/nginx/nginx.conf  172.19.68.138:8083/nginx-alpine-run:1
