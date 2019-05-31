@@ -23,6 +23,8 @@ UI application makes REST calls to Asp.Net Core backend to fetch data.
 3. Use your favourite command line program to execute **docker-compose up** command in the project root folder
 4. After the application initialized navigate to http://localhost:9999.
 
+Demo application address : https://interapiapps.azurewebsites.net 
+
 ## Screenshots
 |  | | |
 | - | - | - |
