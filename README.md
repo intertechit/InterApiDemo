@@ -29,4 +29,4 @@ Demo application address : https://interapiapps.azurewebsites.net
 |  | | |
 | - | - | - |
 | ![Menu](https://user-images.githubusercontent.com/50368463/59108220-19ca1900-8943-11e9-8b64-1a0806490048.png) | ![Accounts](https://user-images.githubusercontent.com/50368463/59108265-2a7a8f00-8943-11e9-83ba-09598a45ede7.png)| ![Account Transactions](https://user-images.githubusercontent.com/50368463/59108306-3cf4c880-8943-11e9-9bfb-cb38faf22fdd.png)|
-|![Wire To Account](https://user-images.githubusercontent.com/50368463/59108336-5564e300-8943-11e9-8d6e-6d501cb5a1f0.png)|![Money Transfers](https://user-images.githubusercontent.com/50368463/59108320-49792100-8943-11e9-9ba2-11bd4c8a7426.png)| |
+|![Wire To Account](https://user-images.githubusercontent.com/50368463/59108320-49792100-8943-11e9-9ba2-11bd4c8a7426.png)|![Money Transfers](https://user-images.githubusercontent.com/50368463/59108336-5564e300-8943-11e9-8d6e-6d501cb5a1f0.png)| |
