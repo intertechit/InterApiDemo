@@ -11,17 +11,17 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Hesaplar',
+      title: 'Account',
       url: '/accounts',
       icon: 'home'
     },
     {
-      title: 'Para Transferleri',
+      title: 'Money Transfer',
       url: '/money-transfer',
       icon: 'wallet'
     },
     {
-      title: 'Çıkış',
+      title: 'Logout',
       url: '/login',
       icon: 'log-out'
     }
