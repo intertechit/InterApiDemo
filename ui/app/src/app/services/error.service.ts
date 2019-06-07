@@ -16,7 +16,7 @@ export class ErrorService {
       header: header,
       subHeader: subHeader,
       message: message,
-      buttons: ['Tamam']
+      buttons: ['OK']
     });
 
     this.logginService.error(message);

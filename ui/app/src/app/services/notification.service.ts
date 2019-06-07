@@ -11,7 +11,7 @@ export class NotificationService {
   async success(message: string) {
     const alert = await this.alertController.create({
       message: message,
-      buttons: ['Tamam']
+      buttons: ['OK']
     });
 
     await alert.present();
